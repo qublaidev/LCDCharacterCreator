@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Row({ index, setSums, sums, clear, edit }: { index: number, setSums: any, sums: number[], clear: boolean, edit: boolean }) {
 
@@ -12,7 +12,7 @@ function Row({ index, setSums, sums, clear, edit }: { index: number, setSums: an
         let s = [...sums]
         s[index] = a
         setSums(s)
-
+        // eslint-disable-next-line
     }, [data, edit])
 
     useEffect(() => {
@@ -42,6 +42,7 @@ function Row({ index, setSums, sums, clear, edit }: { index: number, setSums: an
             }
             setData(d)
         }
+        // eslint-disable-next-line
     }, [edit])
 
 
@@ -61,6 +62,7 @@ function Row({ index, setSums, sums, clear, edit }: { index: number, setSums: an
 
     function calculate(): number {
         let sum: number = 0
+        // eslint-disable-next-line
         data.map((element, index) => {
             if (element) sum += Math.pow(2, 4 - index)
         });

@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Character({ sums, type }: { sums: number[], type: number }) {
-    // console.log({ sums });
     const [rows, setRows] = useState<boolean[][]>([])
 
     useEffect(() => {
@@ -32,7 +31,6 @@ function Character({ sums, type }: { sums: number[], type: number }) {
             r.push(d)
         }
         setRows(r)
-        // console.log({ r });
 
     }, [sums])
 

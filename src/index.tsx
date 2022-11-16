@@ -9,7 +9,6 @@ import {
 import ErrorPage from './ErrorPage';
 import MainLayout from './Layout/MainLayout';
 import Characters from './pages/Characters';
-import MidiToPbp from './pages/MidiToPbp';
 
 const router = createBrowserRouter([
   {
@@ -20,10 +19,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Characters />,
-      },
-      {
-        path: "/midi",
-        element: <MidiToPbp />,
       }
     ]
   }
